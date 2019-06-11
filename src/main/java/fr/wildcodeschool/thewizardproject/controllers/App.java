@@ -10,10 +10,14 @@ public class App {
   public void start(){
     ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
     WizardInterface myDumb = context.getBean("theDress", WizardInterface.class);
+    WizardInterface myGand = context.getBean("theDressed", WizardInterface.class);
     System.out.println("");
     System.out.println("******************");
     System.out.println(myDumb.changeDress());
     System.out.println(myDumb.giveAdvice());
+    System.out.println("******************");
+    System.out.println(myGand.giveAdvice());
+    System.out.println(myGand.changeDress());
     System.out.println("******************");
 
   }
